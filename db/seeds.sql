@@ -1,0 +1,1 @@
+INSERT INTO burgers(burger_name, devoured) VALUES ("Mega Burger",0),("Cheeseburger",0),("Spicy Burger",1),("Double Cheeseburger",0),("Veggie Burger",0)

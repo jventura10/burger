@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Pacifico');
+
+.pacifico-text {
+    font-family: 'Pacifico', cursive;
+}
+
+.burger-text {
+    font-family: 'Amatic SC', cursive;
+}
