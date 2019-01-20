@@ -1,14 +1,23 @@
 var orm=require("../config/orm");
 
 var burger={
-    select: function(){
+    select: function(someCallBack){
         //Call selectAll From ORM
+        orm.selectAll("burgers",function(res){
+            someCallBack(res);
+        });
     },
-    insert:function(){
+    insert:function(cols,vals,someCallBack){
         //Call insertOne From ORM
+        orm.insertOne("burgers",cols,vals,function(res){
+            someCallBack(res);
+        });
     },
-    update: function(){
+    update: function(objColVals,findBur,someCallBack){
         //Call updateOne From ORM
+        orm.updateOne("burgers",objColVals,findBur,function(res){
+            someCallBack(res);
+        });
     }
 };
 

@@ -4,7 +4,8 @@
         <div class="col-sm-4"></div>
         <!-- Heading and Image/Logo -->
         <div class="col-sm-4">
-
+            <h1 class="pacifico-text">Welcome to Ventura Burgers!</h1>
+            <img src="/assets/img/burger.png">
         </div>
         <div class="col-sm-4"></div>
     </div>
@@ -13,11 +14,23 @@
         <div class="col-sm-3"></div>
         <!-- Burgers Ordered -->
         <div class="col-sm-3">
-
+            <ul class="burger-text">
+                {{#each burgers}}
+                    {{#unless devoured}}
+                        {{> burgers/burger-block devour=true }}
+                    {{/unless}}
+                {{/each}}
+            </ul>
         </div>
         <!-- Burgers Already Devoured -->
         <div class="col-sm-3">
-
+            <ol class="burger-text">
+                {{#each burgers}}
+                    {{#if devoured}}
+                        {{> burgers/burger-block devour=false}}
+                    {{/if}}
+                {{/each}}
+            </ol>
         </div>
         <div class="col-sm-3"></div>
     </div>
@@ -26,7 +39,13 @@
         <div class="col-sm-4"></div>
         <!-- Text Input and Submit Button -->
         <div class="col-sm-4">
-
+            <form class="burger-text burger-form">
+                <div class="form-group">
+                    <label for="burgerInput">Enter a Burger to Devour!</label>
+                    <textarea class="form-control" id="burgerInput" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success" id="burgerSubmit">Submit</button>
+            </form>
         </div>
         <div class="col-sm-4"></div>
     </div>
