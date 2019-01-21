@@ -1,4 +1,9 @@
+
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Pacifico');
+
+body {
+    background-color: #DDC9B4;
+}
 
 .pacifico-text {
     font-family: 'Pacifico', cursive;
@@ -6,4 +11,5 @@
 
 .burger-text {
     font-family: 'Amatic SC', cursive;
+    font-size: 25px;
 }

@@ -21,7 +21,7 @@ $(document).ready(function(){
         event.preventDefault();
 
         var newBurger={
-            burger_name=$("#burgerInput").val().trim();
+            burger_name: $("#burgerInput").val().trim()
         };
 
         $.ajax("/api/burgers",{

@@ -4,16 +4,21 @@
         <div class="col-sm-4"></div>
         <!-- Heading and Image/Logo -->
         <div class="col-sm-4">
-            <h1 class="pacifico-text">Welcome to Ventura Burgers!</h1>
-            <img src="/assets/img/burger.png">
+            <h1 class="pacifico-text">Ventura Burgers!</h1>
+            <hr class="my-4">
+            <br>
+            <img src="/img/burger.png" alt="Burger Logo Image" width="300" height="300"> 
         </div>
         <div class="col-sm-4"></div>
     </div>
+    <br>
     <!-- Second row That Will be Broken Will Have Burgers Ordered and Burgers Devoured -->
     <div class="row">
         <div class="col-sm-3"></div>
         <!-- Burgers Ordered -->
         <div class="col-sm-3">
+            <h4 class="pacifico-text">Burgers Ordered!</h4>
+            <hr class="my-4">
             <ul class="burger-text">
                 {{#each burgers}}
                     {{#unless devoured}}
@@ -24,6 +29,8 @@
         </div>
         <!-- Burgers Already Devoured -->
         <div class="col-sm-3">
+            <h4 class="pacifico-text">Burgers Devoured!</h4>
+            <hr class="my-4">
             <ol class="burger-text">
                 {{#each burgers}}
                     {{#if devoured}}
@@ -41,7 +48,7 @@
         <div class="col-sm-4">
             <form class="burger-text burger-form">
                 <div class="form-group">
-                    <label for="burgerInput">Enter a Burger to Devour!</label>
+                    <label for="burgerInput"><strong>Enter a Burger to Devour!</strong></label>
                     <textarea class="form-control" id="burgerInput" rows="3"></textarea>
                 </div>
                 <button type="submit" class="btn btn-success" id="burgerSubmit">Submit</button>
