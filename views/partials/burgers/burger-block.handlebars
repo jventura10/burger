@@ -3,7 +3,12 @@
     
     {{#if devour}} 
     <button type="button" class="btn btn-outline-success update-burger" data-id="{{id}}" data-devour="{{devour}}">
-    Devour It! </button>
+    Devour It!</button>
+    {{else}}
+    <button type="button" class="btn btn-outline-danger delete-burger" data-id="{{id}}" data-devour="{{devour}}">
+    Delete!</button>
     {{/if}}
+
+    
 
 </li>

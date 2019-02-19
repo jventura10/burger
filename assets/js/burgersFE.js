@@ -1,7 +1,7 @@
 $(document).ready(function(){
-    $(".update-burger").on("click",function(event){
-        var id=$(this).data("id");
-        var newValue=$(this).data("devour");
+    $(".update-burger").on("click",function(){
+        let id=$(this).data("id");
+        let newValue=$(this).data("devour");
 
         var updateValue ={
             devoured: newValue
@@ -11,8 +11,19 @@ $(document).ready(function(){
             type: "PUT",
             data: updateValue
         }).then(function(){
-            console.log("Change Devoured to "+newValue);
+            //console.log("Change Devoured to "+newValue);
             //Reload Page
+            location.reload();
+        });
+    });
+
+    $(".delete-burger").on("click",function(){
+        let id=$(this).data("id");
+
+        $.ajax("/api/burgers/"+id,{
+            type: "DELETE"
+        }).then(function(){
+            //console.log("Deleted Burger! ID: "+id);
             location.reload();
         });
     });
@@ -24,14 +35,19 @@ $(document).ready(function(){
             burger_name: $("#burgerInput").val().trim()
         };
 
-        $.ajax("/api/burgers",{
-            type: "POST",
-            data: newBurger
-        }).then(function(){
-            console.log("Added New Burger!");
-            //Reload Page
-            location.reload();
-        });
+        if(newBurger.burger_name!=null){
+            $.ajax("/api/burgers",{
+                type: "POST",
+                data: newBurger
+            }).then(function(){
+                //console.log("Added New Burger!");
+                //Reload Page
+                location.reload();
+            });
+        }
+        else{
+            alert("Cannot Enter Empty Text");
+        }
     });
 
 });
