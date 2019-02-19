@@ -7,10 +7,11 @@ Your app will store every burger in a database, whether devoured or not.
 
 Technologies Used
 
--HTML5/CSS3/Bootstrap
--Javascript/jQuery
--Node
--Express/Express-Handlebars
--mySQL
+- HTML5/CSS3/Bootstrap for styling and front-end
+- Javascript/jQuery for accessing any page elements and logic
+- NodeJS for server
+- ExpressJS for routing
+- Express-Handlebars for templating engine front end
+- MySQL for storing information 
 
 To view website https://serene-mountain-58770.herokuapp.com
