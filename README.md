@@ -13,5 +13,3 @@ Technologies Used
 - ExpressJS for routing
 - Express-Handlebars for templating engine front end
 - MySQL for storing information 
-
-Deployed at: https://aqueous-meadow-45411.herokuapp.com
